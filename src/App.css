@@ -6,20 +6,46 @@
 body{
   width:100vw;
   height:100vh; 
-  background: linear-gradient(#71de71, #b5f1af);
 }
 .recipe-content{
-
   display:flex;
   flex-direction: column;  
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 .recipe-content h1{
   padding:3rem;
-  color:#4ED681;
-
 }
-.receipe-content form{
-
+.recipe-content form{  
+  width:80%;
+  height:3rem;
+  display: flex;
+}
+input{
+  background-color: lightgreen;
+  width:40vw;
+  border:none;
+  border-radius:25px;
+  text-align: center;
+  font-size: larger;
+  font-weight: 800;
+}
+.ingredient-labels{
+  background-color: lightgreen;
+  width:8rem;
+  border-radius:25px;
+  margin-left: 3rem;
+  text-align: center;
+  border:none;
+  font-size: larger;
+  font-weight: 800;
+}
+button{
+  background-color: lightgreen;
+  width:10rem;
+  margin-left: 3rem;
+  border-radius:25px;
+  border:none;
+  font-size: larger;
+  font-weight: 800;
 }
