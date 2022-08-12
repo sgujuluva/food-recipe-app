@@ -4,8 +4,9 @@ import { useState } from "react";
 import Axios from "axios";
 
 function App() {
+
   const [input, setInput] = useState("");
-  const [healthLabel,setHealthLabel] = useState("vegetarian");
+  const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
 
   const url = `https://api.edamam.com/search?q=${input}&app_id=1c719840&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=${healthLabel}`;
@@ -14,7 +15,7 @@ function App() {
   const apiFetch = async () => {
     const response = await Axios.get(url);
     setRecipes(response.data.hits);
-    console.log(response.data.hits)
+    console.log(response.data.hits);
   };
 
   const handleSubmit = (e) => {
@@ -26,7 +27,7 @@ function App() {
     <div className="recipe-content">
       <div className="header">
         <span>
-          <h1 >Food Recipe Search</h1>
+          <h1>Food Recipe Search</h1>
         </span>
       </div>
 
@@ -40,7 +41,34 @@ function App() {
           placeholder="Type the Ingredient"
         />
         <select className="ingredient-labels" name="" id="">
-          <option value="vegan">Vegan</option>
+          <option onClick = {() => setHealthLabel("vegan")} value="vegan">Vegan</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("vegetarian")} value="vegetarian">Vegetarian</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("eggs")} value="eggs">Eggs</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("dairy")} value="dairy ">Dairy</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("low-fat")} value="low-fat">Low Fat</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("high-fiber")} value="high-fiber">High</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("fish")} value="fish">Fish</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("paleo")} value="paleo">Paleo</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("low-sugar")} vaSugar="low-sugar">Low Sugar</option>
+        </select>
+        <select className="ingredient-labels" name="" id="">
+          <option onClick = {() => setHealthLabel("gluten")} value="gluten">Gluten</option>
         </select>
         <input type="submit" value="get recipe" className="submit" />
       </form>
