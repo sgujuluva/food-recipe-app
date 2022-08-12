@@ -1,5 +1,7 @@
 
 import './App.css';
+//images
+import IngredientImage from "./image/home5.png"
 
 function App() {
 
@@ -9,7 +11,11 @@ function App() {
 
   return (
     <div className="recipe-content">
-     <h1>Food Recipe Search</h1>
+<div className="header">
+  <img src={IngredientImage } alt="" />
+<h1>Food Recipe Search</h1>
+</div>
+    
      <form onSubmit={handleSubmit}>
       <input type="text" placeholder='Type the Ingredient'/>
       <select className="ingredient-labels" name="" id="">
