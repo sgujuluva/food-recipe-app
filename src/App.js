@@ -1,21 +1,21 @@
 import "./App.css";
 //hooks
 import { useState, useEffect} from "react";
-import axios from "axios";
+import Axios, * as others  from "axios";
 
 function App() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState([]);
   //fetching api async await
   const apiFetch = async () => {
-    const response = await axios.get(`https://api.edamam.com/search?q=${input}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
-    const data = await response.json();
+    const response = await Axios.get(`https://api.edamam.com/search?q=chicken&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
+    console.log(response)
 
   }
 
-useEffect(() => {
+/* useEffect(() => {
  apiFetch(input)
  .then(data => console.log(data))
-})
+}) */
 
 
   const handleSubmit = (e) => {
@@ -33,7 +33,7 @@ useEffect(() => {
       <div className="header">
         <span>
           {" "}
-          <h1>Food Recipe Search</h1>{" "}
+          <h1 onClick={apiFetch}>Food Recipe Search</h1>{" "}
         </span>
       </div>
 
