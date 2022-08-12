@@ -60,7 +60,7 @@ input,.ingredient-labels{
 }
 ::placeholder{
   color:green;
-  opacity:1;
+  opacity:0.2;
 }
 .ingredient-labels{
  /*  background-color: lightgreen; */
