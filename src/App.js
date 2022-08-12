@@ -1,12 +1,21 @@
 import "./App.css";
 //hooks
-import { useState } from "react";
+import { useState, useEffect} from "react";
+import axios from "axios";
 
 function App() {
   const [input, setInput] = useState("");
-let app_id="1c719840";
-let app_key="804c77a30e46d9113a63ba170f404f73";
-let url = "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free";
+  //fetching api async await
+  const apiFetch = async () => {
+    const response = await axios.get(`https://api.edamam.com/search?q=${input}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
+    const data = await response.json();
+
+  }
+
+useEffect(() => {
+ apiFetch(input)
+ .then(data => console.log(data))
+})
 
 
   const handleSubmit = (e) => {
