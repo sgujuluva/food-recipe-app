@@ -1,0 +1,16 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+.recipe-list{
+    width:100vh;
+    border:2px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.recipe-list h1{
+    
+}

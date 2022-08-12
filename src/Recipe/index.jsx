@@ -1,5 +1,6 @@
 import React from "react";
-
+//styles
+import "./Recipe.css"
 function Recipe({ recipeProp }) {
   return (
     <div className="recipe-list">
