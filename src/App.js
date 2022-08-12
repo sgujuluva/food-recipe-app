@@ -5,9 +5,10 @@ import Axios from "axios";
 
 function App() {
   const [input, setInput] = useState("");
+  const [healthLabel,setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
 
-  const url = `https://api.edamam.com/search?q=${input}&app_id=1c719840&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`;
+  const url = `https://api.edamam.com/search?q=${input}&app_id=1c719840&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=${healthLabel}`;
 
   //fetching api async await
   const apiFetch = async () => {
