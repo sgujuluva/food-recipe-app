@@ -1,41 +1,39 @@
 import "./App.css";
 //hooks
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Axios from "axios";
 
 function App() {
-  let url = `https://api.edamam.com/search?q=chicken&app_id=1c719840&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`;
-  const [input, setInput] = useState([]);
+  const [input, setInput] = useState("");
+  const [recipes, setRecipes] = useState([]);
+
+  let url = `https://api.edamam.com/search?q=${input}&app_id=1c719840&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`;
+
   //fetching api async await
   const apiFetch = async () => {
     const response = await Axios.get(url);
-    setInput(response.data.hits);
+    setRecipes(response.data.hits);
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    apiFetch();
   };
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    setInput(e.target.value);
-  };
-  console.log("the input is:", input);
 
   return (
     <div className="recipe-content">
       <div className="header">
         <span>
-          {" "}
-          <h1 onClick={apiFetch}>Food Recipe Search</h1>{" "}
+          <h1>Food Recipe Search</h1>
         </span>
       </div>
 
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          onChange={handleChange}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
           value={input}
           placeholder="Type the Ingredient"
         />
