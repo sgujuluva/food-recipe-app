@@ -9,13 +9,9 @@ function App() {
   //fetching api async await
   const apiFetch = async () => {
     const response = await Axios.get(url);
-    console.log(response.data.hits);
+    setInput(response.data.hits);
   };
 
-  /* useEffect(() => {
- apiFetch(input)
- .then(data => console.log(data))
-}) */
 
   const handleSubmit = (e) => {
     e.preventDefault();
