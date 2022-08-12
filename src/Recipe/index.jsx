@@ -8,7 +8,7 @@ function Recipe({ recipeProp }) {
       <p>
         {recipeProp.map((item, i) => (
           <li key={i}> 
-          {item.recipe.label}
+          <p className = "label">{item.recipe.label}</p>
           <img src={item.recipe.image} alt="" />
           </li>
         ))}

@@ -3,14 +3,39 @@
     padding :0;
     box-sizing: border-box;
 }
-.recipe-list{
+.recipe-list {
+    color:green;
+    margin:1rem;
     width:100vh;
-    border:2px solid red;
-    display:flex;
+     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .recipe-list h1{
-    
+    padding :2rem;
+    font-size: xx-large;
+    font-weight: 700;
+}
+.recipe-list p{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Dancing Script", cursive;
+    width:50vw;
+   
+}
+.recipe-list p li{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.recipe-list p li img{
+    margin:2rem;
+    width:50%;
+   
+}
+.label{
+   margin-left:10rem;
 }

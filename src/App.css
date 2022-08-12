@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Dancing Script", cursive;
+
   font-weight: 700;
   font-size: 1.3rem;
 }
@@ -20,7 +20,7 @@ body {
 
 .header h1 {
   padding: 3rem;
-
+  font-family: "Dancing Script", cursive;
   font-size: 4rem;
   font-weight: bolder;
   color: green;
@@ -33,6 +33,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -15% 10%;
+  
 }
 .header span {
   position: absolute;
@@ -49,6 +50,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin-top: 1.2rem;
+  
 }
 input,
 .ingredient-labels {
@@ -61,6 +63,7 @@ input,
   font-size: larger;
   font-weight: 800;
   color: white;
+  font-family: "Dancing Script", cursive;
 }
 ::placeholder {
   color: white;
