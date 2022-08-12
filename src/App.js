@@ -2,6 +2,8 @@ import "./App.css";
 //hooks
 import { useState } from "react";
 import Axios from "axios";
+//components
+import Recipe from "../src/Recipe"
 
 function App() {
   const [input, setInput] = useState("");
@@ -88,6 +90,9 @@ function App() {
         </select>
         <input type="submit" value="get recipe" className="submit" />
       </form>
+      
+     <Recipe recipeProp = {recipes} /> 
+          
     </div>
   );
 }
