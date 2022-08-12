@@ -4,7 +4,6 @@ import { useState } from "react";
 import Axios from "axios";
 
 function App() {
-
   const [input, setInput] = useState("");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
@@ -41,34 +40,51 @@ function App() {
           placeholder="Type the Ingredient"
         />
         <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("vegan")} value="vegan">Vegan</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("vegetarian")} value="vegetarian">Vegetarian</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("eggs")} value="eggs">Eggs</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("dairy")} value="dairy ">Dairy</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("low-fat")} value="low-fat">Low Fat</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("high-fiber")} value="high-fiber">High</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("fish")} value="fish">Fish</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("paleo")} value="paleo">Paleo</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("low-sugar")} vaSugar="low-sugar">Low Sugar</option>
-        </select>
-        <select className="ingredient-labels" name="" id="">
-          <option onClick = {() => setHealthLabel("gluten")} value="gluten">Gluten</option>
+          <option onClick={() => setHealthLabel("vegan")} value="vegan">
+            Vegan
+          </option>
+
+          <option
+            onClick={() => setHealthLabel("vegetarian")}
+            value="vegetarian"
+          >
+            Vegetarian
+          </option>
+
+          <option onClick={() => setHealthLabel("eggs")} value="eggs">
+            Eggs
+          </option>
+
+          <option onClick={() => setHealthLabel("dairy")} value="dairy ">
+            Dairy
+          </option>
+
+          <option onClick={() => setHealthLabel("low-fat")} value="low-fat">
+            Low Fat
+          </option>
+
+          <option
+            onClick={() => setHealthLabel("high-fiber")}
+            value="high-fiber"
+          >
+            High
+          </option>
+
+          <option onClick={() => setHealthLabel("fish")} value="fish">
+            Fish
+          </option>
+
+          <option onClick={() => setHealthLabel("paleo")} value="paleo">
+            Paleo
+          </option>
+
+          <option onClick={() => setHealthLabel("low-sugar")} value="low-sugar">
+            Low Sugar
+          </option>
+
+          <option onClick={() => setHealthLabel("gluten")} value="gluten">
+            Gluten
+          </option>
         </select>
         <input type="submit" value="get recipe" className="submit" />
       </form>
