@@ -6,7 +6,7 @@ import Axios from "axios";
 import Recipe from "../src/Recipe";
 
 function App() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("mutton");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
 

@@ -5,19 +5,23 @@ function Recipe({ recipeProp }) {
   return (
     <div className="recipe-list">
       <h1>List of Recipes with ingredients:</h1>
-      <p>
+      <div className="card">
         {recipeProp.map((item, i) => (
           <li key={i}> 
-          <p className = "label">{item.recipe.label}</p>
           <img src={item.recipe.image} /* onClick={() => window.open(item.recipe.url)} */alt="" /> 
-           <p>Ingrdient Lines: <br/>{item.recipe.ingredientLines}</p> 
-           <p>Ingredients: <br/> {item.recipe.ingredients.text}
+          <div className = "ing-details">
+          <h2 className = "label">{item.recipe.label}</h2>
+          
+          <p className="ingri"><span>Ingredient Lines: </span><br/>{item.recipe.ingredientLines}</p> 
+          </div>
+          
+          {/*  <p>Ingredients: <br/> {item.recipe.ingredients.text}
            {item.recipe.ingredients.quantity}
            {item.recipe.ingredients.measure}
-           {item.recipe.ingredients.food}</p>
+           {item.recipe.ingredients.food}</p> */}
           </li>
         ))}
-      </p>
+      </div>
     </div>
   );
 }

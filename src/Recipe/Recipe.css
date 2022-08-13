@@ -1,10 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=PT+Sans:ital@1&display=swap');
-*{
-    margin : 0;
-    padding :0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=PT+Sans:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.recipe-list {
+.card {
+  display: flex;
+
+  justify-content: space-between;
+
+  border: 2px solid red;
+}
+.card li {
+  width: 20rem;
+  padding: 20px;
+  border: 1px solid #c9c9c9;
+}
+.ing-details {
+  padding: 2px 16px;
+}
+.ing-details h2{
+    margin:1rem;
+}
+.ingri span{
+    border:2px solid green;
+    font-family: "Dancing Script", cursive;
+    color:green;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+.ingri{
+    border:2px solid green;
+    padding:1rem;
+}
+.
+/* .recipe-list {
     color:green;
     margin:1rem;
     width:100vh;
@@ -39,4 +69,4 @@
 }
 .label{
    margin-left:10rem;
-}
+} */
