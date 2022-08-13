@@ -9,8 +9,10 @@
 }
 .card {
   display: flex;
-
+flex-direction: row;
+flex-wrap: wrap;
   justify-content: space-between;
+
 }
 .card img {
   margin-left: 2rem;
