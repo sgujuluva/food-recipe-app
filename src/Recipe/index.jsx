@@ -4,7 +4,7 @@ import "./Recipe.css"
 function Recipe({ recipeProp }) {
   return (
     <div className="recipe-list">
-      <h1>List of Recipes with ingredients:</h1>
+      
       <div className="card">
         {recipeProp.map((item, i) => (
           <li key={i}> 
