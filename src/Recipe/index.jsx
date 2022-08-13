@@ -11,14 +11,15 @@ function Recipe({ recipeProp }) {
           <img src={item.recipe.image} /* onClick={() => window.open(item.recipe.url)} */alt="" /> 
           <div className = "ing-details">
           <h2 className = "label">{item.recipe.label}</h2>
-          
-          <p className="ingri"><span>Ingredient Lines: </span><br/>{item.recipe.ingredientLines}</p> 
-          </div>
-          
-          {/*  <p>Ingredients: <br/> {item.recipe.ingredients.text}
+          <span className="ingri-title">Ingredients: </span>
+          <p className="ingri"><br/>{item.recipe.ingredientLines}</p> 
+          <p className="ingi-quan">Ingredients: <br/> {item.recipe.ingredients.text}
            {item.recipe.ingredients.quantity}
            {item.recipe.ingredients.measure}
-           {item.recipe.ingredients.food}</p> */}
+           {item.recipe.ingredients.food}</p>
+          </div>
+          
+          {/*   */}
           </li>
         ))}
       </div>
