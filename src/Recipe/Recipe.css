@@ -11,13 +11,16 @@
   display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 .card img {
-  margin-left: 2rem;
+  margin: 1rem 0 1rem 2rem;
+  border:2px solid grey;
+  border-radius: 25px;
 }
 .card li {
+
   width: 20rem;
   padding: 20px;
   border: 1px solid #c9c9c9;
@@ -32,54 +35,21 @@ flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 .ingri-title {
-    color:white;
-    background-color: green;
+  color:white;
+  background-color: green;
 }
-.ingri {
-  padding: 1rem;
+.ingi-quan {
+ width:100%;
   color: green;
   font-family: "Dancing Script", cursive;
+  border:none;
 }
 .label {
+
+  height:3rem;
   font-family: "Dancing Script", cursive;
-  margin-top: 1.2rem;
+  margin: 0.5rem 0;
   font-size: 1.8rem;
   text-align: center;
   color: green;
 }
-/* .recipe-list {
-    color:green;
-    margin:1rem;
-    width:100vh;
-     display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.recipe-list h1{
-    padding :2rem;
-    font-size: xx-large;
-    font-weight: 700;
-}
-.recipe-list p{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'PT Sans', sans-serif;
-    width:50vw;
-   
-}
-.recipe-list p li{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.recipe-list p li img{
-    margin:2rem;
-    width:50%;
-   
-}
-.label{
-   margin-left:10rem;
-} */

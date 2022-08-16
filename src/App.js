@@ -7,12 +7,12 @@ import Recipe from "../src/Recipe";
 
 function App() {
   const [input, setInput] = useState("");
-  const [healthLabel, setHealthLabel] = useState("vegan");
+  const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
 
-  const url = `https://api.edamam.com/search?q=${input}&app_id=1c719840&app_key=
-  804c77a30e46d9113a63ba170f404f73&health=${healthLabel}`;
-/*  &from=0&to=10&calories=591-722  */
+  const url = `https://api.edamam.com/search?q=${input}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}
+ &health=${healthLabel}`;
+  /*  &from=0&to=10&calories=591-722  */
   //fetching api async await
   const apiFetch = async () => {
     const response = await Axios.get(url);
@@ -66,10 +66,6 @@ function App() {
             Low Fat
           </option>
 
-          <option onClick={() => setHealthLabel("fish")} value="fish">
-            Fish
-          </option>
-
           <option onClick={() => setHealthLabel("paleo")} value="paleo">
             Paleo
           </option>
@@ -82,7 +78,7 @@ function App() {
             Gluten
           </option>
         </select>
-        <input type="submit" value="get recipe" className="submit" />
+        <input type="submit" value="Get Recipe" className="submit" />
       </form>
 
       <Recipe recipeProp={recipes} />

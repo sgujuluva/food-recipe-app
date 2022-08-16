@@ -14,19 +14,13 @@ function Recipe({ recipeProp }) {
             />
             <div className="ing-details">
               <span className="ingri-title">Ingredients: </span>
-              <p className="ingri">
-                <br />
-                {item.recipe.ingredientLines}
-              </p>
+
               <p className="ingi-quan">
-                Ingredients: <br /> {item.recipe.ingredients.text}
-                {item.recipe.ingredients.quantity}
-                {item.recipe.ingredients.measure}
-                {item.recipe.ingredients.food}
+                {item.recipe.ingredients.map((ingri, index) => {
+                  return <li>{ingri.text}</li>;
+                })}
               </p>
             </div>
-
-            {/*   */}
           </li>
         ))}
       </div>
