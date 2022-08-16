@@ -17,7 +17,7 @@ function Recipe({ recipeProp }) {
 
               <p className="ingi-quan">
                 {item.recipe.ingredients.map((ingri, index) => {
-                  return <li>{ingri.text}</li>;
+                  return <p>{ingri.text}</p>;
                 })}
               </p>
             </div>

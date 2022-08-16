@@ -44,6 +44,10 @@ flex-wrap: wrap;
   font-family: "Dancing Script", cursive;
   border:none;
 }
+.ingi-quan p{
+  margin-top:1rem;
+  line-height: 2rem;
+}
 .label {
 
   height:3rem;
