@@ -17,7 +17,6 @@ function App() {
   const apiFetch = async () => {
     const response = await Axios.get(url);
     setRecipes(response.data.hits);
-    console.log(response.data.hits);
   };
 
   const handleSubmit = (e) => {
@@ -42,41 +41,23 @@ function App() {
           value={input}
           placeholder="Type the Ingredient"
         />
-        <select className="ingredient-labels" name="" id="">
-          <option onClick={() => setHealthLabel("vegan")} value="vegan">
-            Vegan
-          </option>
+        <select
+          onChange={(e) => setHealthLabel(e.target.value)}
+          className="ingredient-labels"
+        >
+          <option value="vegan">Vegan</option>
 
-          <option
-            onClick={() => setHealthLabel("vegetarian")}
-            value="vegetarian"
-          >
-            Vegetarian
-          </option>
+          <option value="vegetarian">Vegetarian</option>
 
-          <option onClick={() => setHealthLabel("eggs")} value="eggs">
-            Eggs
-          </option>
+          <option value="eggs">Eggs</option>
 
-          <option onClick={() => setHealthLabel("dairy")} value="dairy ">
-            Dairy
-          </option>
+          <option value="dairy ">Dairy</option>
 
-          <option onClick={() => setHealthLabel("low-fat")} value="low-fat">
-            Low Fat
-          </option>
+          <option value="low-fat">Low Fat</option>
 
-          <option onClick={() => setHealthLabel("paleo")} value="paleo">
-            Paleo
-          </option>
+          <option value="low-sugar">Low Sugar</option>
 
-          <option onClick={() => setHealthLabel("low-sugar")} value="low-sugar">
-            Low Sugar
-          </option>
-
-          <option onClick={() => setHealthLabel("gluten")} value="gluten">
-            Gluten
-          </option>
+          <option value="gluten">Gluten</option>
         </select>
         <input type="submit" value="Get Recipe" className="submit" />
       </form>
