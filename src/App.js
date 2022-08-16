@@ -1,6 +1,6 @@
 import "./App.css";
 //hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 //components
 import Recipe from "../src/Recipe";
@@ -19,10 +19,13 @@ function App() {
     setRecipes(response.data.hits);
   };
 
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
     e.preventDefault();
     apiFetch();
-  };
+  }; 
+ /*  useEffect(() => {
+    apiFetch();
+  },[]) */
 
   return (
     <div className="recipe-content">
@@ -59,7 +62,7 @@ function App() {
 
           <option value="gluten">Gluten</option>
         </select>
-        <input type="submit" value="Get Recipe" className="submit" />
+       <input type="submit" value="Get Recipe" className="submit" />
       </form>
 
       <Recipe recipeProp={recipes} />
