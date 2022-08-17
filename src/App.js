@@ -32,7 +32,7 @@ function App() {
     <div className="recipe-content">
       <div className="header">
         <span>
-          <h1>Food Recipe Search</h1>
+          <h1>Food Ingredient Search</h1>
         </span>
       </div>
 
@@ -61,7 +61,6 @@ function App() {
 
           <option value="low-sugar">Low Sugar</option>
 
-          <option value="gluten">Gluten</option>
         </select>
        <input type="submit" value="Get Recipe" className="submit" />
       </form>
