@@ -22,6 +22,7 @@ function App() {
  const handleSubmit = (e) => {
     e.preventDefault();
     apiFetch();
+    setInput("")
   }; 
  /*  useEffect(() => {
     apiFetch();
